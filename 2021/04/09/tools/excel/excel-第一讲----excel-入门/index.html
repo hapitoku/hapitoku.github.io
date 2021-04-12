@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="maoxf">
+    <meta name="description" content="小站小描述">
+    <meta name="author" content="maoxf">
+    
+    <title>
+        
+            excel 第一讲 -- excel 入门 |
+        
+        maoxf&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"hapitoku.github.io","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"生活不止眼前的苟且 还有诗和远方的田野"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.2"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="maoxf小站" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                maoxf&#39;s blog
+            </a>
+        </div>
+
+        
+        <!-- 音乐播放器 -->
+        
+            <div>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=86   height=95 src="//music.163.com/outchain/player?type=2&amp;id=1337870861&amp;auto=0&amp;height=66"></iframe>
+            </div>
+        
+        
+        
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">excel 第一讲 -- excel 入门</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">maoxf</span>
+                        
+                            <span class="author-label">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-04-09 08:04:20
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/tools/">tools</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/excel/">excel</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>3.7k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>12 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="excel-入门"><a href="#excel-入门" class="headerlink" title="excel 入门"></a>excel 入门</h1><blockquote>
+<p><a href="#https://www.bilibili.com/video/BV184411C7Ci?from=search&seid=8003660898608634307">excel详解</a></p>
+</blockquote>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>excel 中每一个格子叫 <code>单元格</code></p>
+<p>下一个单元格，enter  </p>
+<p>右一个，tab</p>
+<p>左一个，shift+tab</p>
+<p><code>键盘的上下左右键</code> 可以更简单控制</p>
+<h3 id="单元格宽度自适应"><a href="#单元格宽度自适应" class="headerlink" title="单元格宽度自适应"></a>单元格宽度自适应</h3><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-01.27j90x2owx1c.jpg"
+                      alt="excel-01" style="zoom:50%;" /
+                >
+
+<p>要想让单元格宽度和文字长度一致，可以<code>双击</code> F 和 G 之间的间隔线。</p>
+<h3 id="合并后居中"><a href="#合并后居中" class="headerlink" title="合并后居中"></a>合并后居中</h3><p>将整一行的单元格合并以后，将文字放在中间</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-02.yqerrw7risg.jpg"
+                      alt="excel-02"
+                ></p>
+<p>直接点击  菜单栏 –》 常用 –》 合并后居中 即可。  </p>
+<p>其他各种颜色，字体等等，都可以在这里找到。</p>
+<h3 id="将所有栏位宽度（高度）调整为一致"><a href="#将所有栏位宽度（高度）调整为一致" class="headerlink" title="将所有栏位宽度（高度）调整为一致"></a>将所有栏位宽度（高度）调整为一致</h3><p>框选所有想要相同宽度的单元格，之后<code>选中其中任何一个间隔线</code> 拖动到想要宽度，之后所有单元格宽度都会一致。</p>
+<p><code>列高</code> 的操作也同样适用</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-03.446zqf1iq660.jpg"
+                      alt="excel-03"
+                ></p>
+<h3 id="产生等差（等比）数列"><a href="#产生等差（等比）数列" class="headerlink" title="产生等差（等比）数列"></a>产生等差（等比）数列</h3><p>将鼠标移动到 T002 <code>右下角</code>，变成 + 后，往下拖动。可以自动生成数列。</p>
+<p>等差，等比数列 也可以。</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-04.47a25ri5vnc0.jpg"
+                      alt="excel-04" /
+                >
+
+<h3 id="日期设置"><a href="#日期设置" class="headerlink" title="日期设置"></a>日期设置</h3><p>excel 默认的日期格式以 <code>/</code> 作为分隔，方便进行后期的各种日期格式转换。例如   2021/04/09 。</p>
+<p>输入完成以后，<code>右键</code>日期，可以进行各种格式的调整。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-05.58iqunz72700.jpg"
+                      alt="excel-05"
+                ></p>
+<p>如果出现全部都是 <code>########</code> 符号。 原因是长度超过了单元格的长度。</p>
+<p>可以<code>双击右侧的分隔线</code>，自适应内容长度，即可解决问题。</p>
+<p>快捷键：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">control  ;  </span><br></pre></td></tr></table></figure>
+
+<p>即可自动产生默认日期。  2021/04/09</p>
+<hr>
+<p>当然也可以 <code>拉住右下角往下拖</code>, 来实现自动补充。并且可以进行如下选择。</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-06.6o6qb9z1tio0.jpg"
+                      alt="excel-06"  /
+                >
+
+<h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-07.70om2e7h2ls0.jpg"
+                      alt="excel-07"
+                ></p>
+<p>如上图所示，想要进行<code>乘法</code>计算，只需要在 总金额处：</p>
+<ol>
+<li>写一个 = 符号</li>
+<li>鼠标左键单击 45 所在的单元格</li>
+<li>鼠标左键单击 30 所在的单元格</li>
+<li>回车</li>
+</ol>
+<p>如果要进行公式的修改，<code>双击单元格</code>，或者 到上方的编辑页直接编辑。</p>
+<p><strong>excel 进行的复制，是计算公式的复制，不只是值的复制</strong></p>
+<hr>
+<p>当然，也可以通过<code>拖拉右下角</code>来实现整列的计算。</p>
+<h3 id="价格的设置"><a href="#价格的设置" class="headerlink" title="价格的设置"></a>价格的设置</h3><p>选择整一列以后，在  菜单 –》 常规 中选择 <code>货币</code>，就可以将数字转变成货币形式。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-08.1atpwpikhh0g.jpg"
+                      alt="excel-08"
+                ></p>
+<p>同时可以根据自己需求，进行小数位数减少等的操作。</p>
+<p><strong>左上角有个<code>小刷子</code>（我的截图最左上角从上往下第三个），可以复制格式。选择了以后，选中其他的金额列就可以复制格式了</strong></p>
+<h2 id="表格设计"><a href="#表格设计" class="headerlink" title="表格设计"></a>表格设计</h2><h3 id="表格边框"><a href="#表格边框" class="headerlink" title="表格边框"></a>表格边框</h3><p>如果在打印中，没有表格线，框。可以有两个方法</p>
+<h4 id="默认表格形式"><a href="#默认表格形式" class="headerlink" title="默认表格形式"></a>默认表格形式</h4><p><strong>页面布局 –》 网格线 –》 打印</strong>  中的打勾，即可打印出表格边框。</p>
+<h4 id="自定义表格形式"><a href="#自定义表格形式" class="headerlink" title="自定义表格形式"></a>自定义表格形式</h4><ol>
+<li>关闭上面的 <strong>打印</strong>中的打勾。</li>
+<li>开始（常用） –》边框选择 –》 线条颜色 ，线型</li>
+<li>这时候，鼠标会变成画笔，可以 画横线，或者竖线，或者画框（只有外框）。</li>
+<li>开始 –》 边框选择 –》 绘制边框网络  ，选择后，画笔会画出框以及内部所有网格。</li>
+<li>按住 <code>shift不放</code>，会变成橡皮擦，可以擦除格式。</li>
+<li><code>esc</code> 退出画笔功能。</li>
+<li>还有另一种方式，是先选择范围，再进行边框的选择，和 开始 –》 边框选择 –》 上下框线  基本类似</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-09.3qiko27inos0.png"
+                      alt="excel-09"
+                ></p>
+<h3 id="表格背景图片"><a href="#表格背景图片" class="headerlink" title="表格背景图片"></a>表格背景图片</h3><p>背景图片无法打印出来，但是能提高表格的美观程度</p>
+<ol>
+<li><p>页面布局 –》 背景  中可以选择。</p>
+</li>
+<li><p>图片中存在的网格线，可以通过如下去除：页面布局 –》 网格线 –》 查看 ，把 √ 去掉。</p>
+</li>
+<li><p>如果有字部分因为图片原因难以辨认，可以先框选表格部分， 开始 –》 油漆桶 –》 选个白色即可。</p>
+</li>
+<li><p>选择 A 列，<code>右键</code>，选择插入，可以在右侧插入一列，更加美观。</p>
+</li>
+<li><p>框选一部分以后， 开始 –》 油漆桶 –》 无填充 ，又可以显示背景图片。选择颜色，就又可以覆盖。</p>
+</li>
+<li><p>最终结果如下</p>
+</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-10.5ehoxvj9fzc0.jpg"
+                      alt="excel-10"
+                ></p>
+<h3 id="冻结窗格"><a href="#冻结窗格" class="headerlink" title="冻结窗格"></a>冻结窗格</h3><ol>
+<li><p>有时需要将<code>表头冻结</code>，使其在滚轮下滑时，固定在第一行</p>
+</li>
+<li><p>首先选中需要冻结的行的<code>下一行</code></p>
+</li>
+<li><p>视图 –》 冻结窗格 ，即可冻结自己所想的那一行。</p>
+</li>
+<li><p>同时也能<code>冻结列</code>，同理，选择想要冻结的右一行，选择 冻结窗格即可。</p>
+</li>
+</ol>
+<h3 id="分割视窗"><a href="#分割视窗" class="headerlink" title="分割视窗"></a>分割视窗</h3><ol>
+<li>分割视窗，常用来进行 **上下跨度比较大 ** 的两列之间的比较。比如 1月和 12月 的数据距离比较远，想资料比对，可以通过这个实现。</li>
+<li>选中想要分割的 <code>下一行</code>，视图 –》 拆分</li>
+<li>之后，上下两部分可以独立滚动。</li>
+<li>如果将 分割线拖到表格最上方，就可以关闭 拆分功能。</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-11.7j7wiyevuj40.png"
+                      alt="excel-11"
+                ></p>
+<h3 id="套用表格格式"><a href="#套用表格格式" class="headerlink" title="套用表格格式"></a>套用表格格式</h3><p>类似于word， excel有更强大的转化为表格的方法。</p>
+<h4 id="第一种，直接格式化"><a href="#第一种，直接格式化" class="headerlink" title="第一种，直接格式化"></a>第一种，直接格式化</h4><ol>
+<li>开始 –》 套用表格格式。</li>
+<li>直接对表格样式进行更改。</li>
+</ol>
+<h4 id="第二种，用表格化"><a href="#第二种，用表格化" class="headerlink" title="第二种，用表格化"></a>第二种，用表格化</h4><ol>
+<li>框选想要 修改表格的区域。</li>
+<li>插入 –》 表格</li>
+<li>会跳到 表格栏，便可以选择自己喜欢的样式。</li>
+<li><code>镶边行</code>，<code>镶边列</code> 等都可以设置。</li>
+<li>如果觉得<code>颜色不够多</code>，可以到  页面布局 –》 颜色  。 整个表格都会变化颜色。</li>
+<li>表格中的 <code>汇总行</code> ，会将最后一列值相加。 可以拖动右下角，往左边拖，使每一列都计算出汇总数据。</li>
+<li>同时对每一列的计算，都可以选择不同的计算公式。见下图</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-12.4svxbmhx9y40.jpg"
+                      alt="excel-12"
+                ></p>
+<ol start="8">
+<li><p><code>表格新增一行</code> ：在上一行选中一个单元格，按 tab 键可以新增一空白行</p>
+</li>
+<li><p><code>表格新增一列</code>：在标题同一行新增一个单元格，回车即可。</p>
+</li>
+<li><p>清除所有样式：只要 表格 –》 选择样式处 –》 第一个无样式。  </p>
+</li>
+<li><p>退出表格模式：表格 –》 转换为区域 ，  即可变成原始状态。</p>
+</li>
+</ol>
+<h2 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><h4 id="默认排序"><a href="#默认排序" class="headerlink" title="默认排序"></a>默认排序</h4><ol>
+<li>选中想要排序的列 中的<code>某一个单元格</code></li>
+<li>开始 –》 排序和筛选 –》 升序 ， 即可升序排序</li>
+<li><code>排序存在的问题</code>：不能简单框选，然后进行排序。 可能会只排序那一列，其他几列没有排序，导致 各个月份的数据出现错乱。</li>
+<li>所以不要框选整栏的资料</li>
+<li>如果要进行多列的排序，则 先选择<code>一个单元格</code></li>
+<li>开始 –》 排序和筛选 –》 自定义排序 ，可以增加多列来进行排序。</li>
+</ol>
+<h4 id="自定义排序"><a href="#自定义排序" class="headerlink" title="自定义排序"></a>自定义排序</h4><ol>
+<li>根据自己定义的顺序来进行排序 ，常 用于中文等的排序</li>
+<li>开始 –》 排序和筛选 –》 自定义排序 –》 顺序 –》 自定义列表  </li>
+<li>按需加入，就可以进行排序。</li>
+<li>在第二步中的自定列表中，可以看到已经有部分值。</li>
+<li>用处是， 在单元格中输入 <code>一月</code> 以后，按住右下角往下拉，可以出来已经配置的值。</li>
+<li><code>!!所以可以自定义所需的值，到时候往下拉，就可以出来该顺序的值</code>。</li>
+</ol>
+<h3 id="筛选"><a href="#筛选" class="headerlink" title="筛选"></a>筛选</h3><h4 id="普通筛选"><a href="#普通筛选" class="headerlink" title="普通筛选"></a>普通筛选</h4><p>可以<code>隐藏</code>不满足条件的数据。只显示满足条件的数据。</p>
+<ol>
+<li>开始 –》 排序和筛选 –》 筛选 。</li>
+<li>在每一列的表头就出现 向下的箭头，可以选择想要筛选的数据。</li>
+<li><code>模糊筛选</code>：   每一列表头的筛选中 –》   开头是  ， 就可以进行文字的筛选。</li>
+<li>对数字 进行 <code>高于</code>，<code>小于</code>，<code>介于</code>  等的筛选也是可以。</li>
+<li>取 <code>前几项</code>， 个数，百分比 也可以。</li>
+<li><code>日期筛选</code> 也有特定的筛选器，可以选择 某个日期之后，<code>上个月</code>，<code>这一季</code> 都可以。</li>
+<li><code>色彩排序</code>： 按住 ctrl（command），选择几个单元格 –》 油漆桶，选择喜欢的颜色。 –》 排序下箭头 –》 按颜色排序 。</li>
+<li><code>色彩筛选</code>当然，也可以对上一步中的 色彩进行筛选。</li>
+</ol>
+<h4 id="切片器"><a href="#切片器" class="headerlink" title="切片器"></a>切片器</h4><p>切片器，就是强化版的筛选。</p>
+<ol>
+<li>在表格 –》 插入切片器 。选择想要生成的列的切片器。</li>
+<li>多选几个后，会生成多个框。</li>
+<li>点击其中的 栏目，可以快速进行筛选。</li>
+<li><code>多选条件</code>也是可以，按住 <code>ctrl键不放</code>，可以选择多个条件。</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-13.4wkk1f2ki140.jpg"
+                      alt="excel-13"
+                ></p>
+<ol start="5">
+<li>去除切片器：删除即可。</li>
+</ol>
+<h3 id="条件格式"><a href="#条件格式" class="headerlink" title="条件格式"></a>条件格式</h3><p><strong>筛选会将不符合条件的隐藏。</strong></p>
+<p><strong>条件格式，会用特殊颜色来显示筛选结果。</strong></p>
+<ol>
+<li>选定一列</li>
+<li>开始 –》 条件格式 –》 突出显示单元格规则 –》 等于 –》 <code>输入一个值（或者直接用鼠标点击一个单元格作为条件）</code>。</li>
+<li>符合条件的值便会高亮。</li>
+<li>日期，介于 等等条件，也是相同方法。</li>
+<li>开始 –》 条件格式 –》   <code>数据条</code> <code>色阶</code> <code>图标集</code> 也可以更明显的显示数据的大小，各个规则也可以自定义。如下是数据条。</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-14.3uofphoy8ve0.jpg"
+                      alt="excel-14"
+                ></p>
+<ol start="6">
+<li>清除规则：  开始 –》 条件格式 –》 清除规则 –》 清除整张表的规则 。可以还原所有信息。</li>
+</ol>
+<h2 id="公式设定"><a href="#公式设定" class="headerlink" title="公式设定"></a>公式设定</h2><h2 id="工作表"><a href="#工作表" class="headerlink" title="工作表"></a>工作表</h2><p>excel 最大的特点，就是一个excel文件内可以有多个工作表</p>
+<h3 id="基本操作-1"><a href="#基本操作-1" class="headerlink" title="基本操作"></a>基本操作</h3><ol>
+<li>复制工作表：  <code>按住ctrl</code> ，鼠标左键拖动便可以复制。</li>
+<li>上述复制工作表也可以在不同的excel 之间复制。  工作表上–》右键 –》 移动或复制 –》 选择目标excel –》 建立副本。</li>
+</ol>
+<h3 id="工作表群组"><a href="#工作表群组" class="headerlink" title="工作表群组"></a>工作表群组</h3><p> 同时操作多张工作表的内容和格式。</p>
+<h4 id="群组基本操作"><a href="#群组基本操作" class="headerlink" title="群组基本操作"></a>群组基本操作</h4><ol>
+<li><code>按住ctrl</code>，选择多张工作表</li>
+<li>修改样式，会同步修改所有群组中的工作表</li>
+<li>退出群组： 右键某一张工作表 –》 取消工作表群组。</li>
+<li><code>隐藏</code>：上述方法，右键之后，也可以隐藏，取消隐藏。</li>
+</ol>
+<h4 id="合并计算"><a href="#合并计算" class="headerlink" title="合并计算"></a>合并计算</h4><ol>
+<li>可以将多张工作表内容合并，计算到同一张工作表。</li>
+<li>数据  –》  合并计算 –》 函数（选择求和） –》 引用（点击具体的表，框选内容） –》 点击 + 号 新增 –》 如果有标题栏 等，可以选择最下面的 <code>首行</code>,<code>最左列</code> –》 确定，即可将数据汇总。</li>
+<li>上述步骤中，选择 <code>创建指向源数据的链接</code> ，会在表格最左侧显示 + 号，可以查看是从哪张表格来源。</li>
+<li>常常用于不同月份，不同年份的合计。</li>
+</ol>
+<h2 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h2><p>表格转成图表</p>
+<h3 id="基本方法"><a href="#基本方法" class="headerlink" title="基本方法"></a>基本方法</h3><ol>
+<li><p>选中表格，包含 <code>行头</code>,<code>列头</code> , 因为他们可以作为坐标轴文字。</p>
+</li>
+<li><p>创建图表：插入 –》 建议的图表。</p>
+</li>
+<li><p>图表移动到新的工作表： 图表设计 –》 移动图表</p>
+</li>
+<li><p>图表内新增文字等项目：  图表设计 –》 添加图表元素 。 可以加入 <code>坐标轴标题</code> 等等。</p>
+</li>
+<li><p><code>纵坐标轴标题竖排</code>：右键标题 –》 设置坐标轴标题格式 –》 文本选项–》 文字效果 –》 文字方向 –》 竖排</p>
+</li>
+<li><p>表格与图表同步：新增数据 –》 拖动单元格右下角 –》 使图标内容包含整个表格 。 当然也可以进行筛选。</p>
+</li>
+<li><p>更改图标样式：图标设计 –》 更改图标类型 。    </p>
+</li>
+<li><p>切换行列：图标设计 –》 切换行/列。   </p>
+</li>
+</ol>
+<h3 id="中级表"><a href="#中级表" class="headerlink" title="中级表"></a>中级表</h3><ol>
+<li>横（纵）坐标的范围更改：坐标轴上<code>右键</code> –》 设置纵坐标格式。  可以设置<strong>最大，最小值，主刻度，次要刻度等</strong></li>
+<li>用图片替代直方图：直方图上右键 –》 设置数据列格式 –》 油漆桶 –》 图片或纹理填充（可以用自己的图片）。</li>
+<li>饼图：<code>ctrl</code>选中多块区域 –》 插入 –》 饼图</li>
+<li>饼图中添加说明： 图表设计 –》 添加图表元素 –》 数据标签 –》 数据标签外 。 或者直接右边的 <code>+</code> 号。</li>
+<li>饼图区块移出：双击选中某一块饼 –》 移除–》 设置阴影等。</li>
+<li>折线图：插入 –》 折线图。</li>
+<li>折线走势图（迷你图）：选中表格最右边<code>空白</code>栏位 –》 插入 –》 迷你图 –》 框选表格中数据 –》 确定。可以显示迷你折线图。</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/hapitoku/maoxf-bolg-images@main/excel/excel-15.50hcysi8x900.jpg"
+                      alt="excel-15"
+                ></p>
+<ol start="8">
+<li>迷你图样式修改：迷你图 –》 设置柱形等，颜色等。</li>
+<li>删除迷你图：迷你图 –》 清除</li>
+<li>散点图：选中数据 –》 插入 –》 散点图 –》 右上角<code>+</code>号 –》 趋势图</li>
+<li><code>雷达图</code>，<code>组合图</code> 等，用法都类似。</li>
+</ol>
+<h3 id="数据透视表"><a href="#数据透视表" class="headerlink" title="数据透视表"></a>数据透视表</h3><ol>
+<li><p>选中<code>一个单元格</code> –》 插入 –》 数据透视表</p>
+</li>
+<li><p>可以排序，筛选</p>
+</li>
+<li><p>可以将栏目直接拖拉到 <code>筛选</code>栏等里面。</p>
+</li>
+<li><p>数据透视表 == 积木玩具，可以根据自己想要的来操作。</p>
+</li>
+<li><p>单元格可以组成<code>群组</code></p>
+</li>
+<li><p>各个栏目都可以重命名</p>
+</li>
+<li><p><code>数据透视图</code> ：数据透视表分析 –》 数据透视图</p>
+</li>
+<li><p><code>数据同步</code>：原始表格更新了数据，需要同步数据：  数据透视表分析 –》 刷新</p>
+</li>
+<li><p><code>自动同步</code>：表格创建时候，即为动态表格： 框选所有数据 –》 开始 –》 套用表格格式 –》 选择其中一个即可。</p>
+</li>
+</ol>
+<h2 id="打印设定"><a href="#打印设定" class="headerlink" title="打印设定"></a>打印设定</h2><h3 id="分页设定"><a href="#分页设定" class="headerlink" title="分页设定"></a>分页设定</h3><ol>
+<li>查看打印的分页：视图 –》 分页预览 。 <code>虚线是分页线</code></li>
+<li>调整分页：选中分页线 –》 拖拉即可。  可以水平拉（将最后一列总计放到正常页面中），可以竖直拉（按照月份来分页打印）。</li>
+<li>手动插入（移除）分页：页面布局 –》 分隔符 –》 插入（移除）分页。</li>
+<li>标题列在每一页中都显示：页面布局–》 打印标题 –》 顶端标题行 –》 选择标题行。</li>
+<li>上述是第一种方式，下面是第二种方式</li>
+<li>调整页面大小：页面布局 –》 宽度（高度，缩放比？）</li>
+<li>打印特定行：页面布局 –》 打印区域 –》 设置打印区域（清除）</li>
+</ol>
+<h3 id="页眉页脚，水印"><a href="#页眉页脚，水印" class="headerlink" title="页眉页脚，水印"></a>页眉页脚，水印</h3><ol>
+<li>查看 页眉，页脚  ：  视图–》页面布局 。  每一个都分为 <code>左中右</code> 三个区块。</li>
+<li>添加页码：选中页脚的右方格 –》 页眉和页脚–》 页码 –》 在旁边可以输入文字，比如 第   页 –》 就会显示 第一页</li>
+<li>添加总页数：选中页脚有方格 –》 页眉和页脚 –》 页数 –》 添加文字 –》 第1页/共4页</li>
+<li>页尾模板：页眉和页脚 –》 页尾 –》 选择模板</li>
+<li>可以插入图片：页眉和页脚 –》 图片 –》 调整大小 –》 设定百分比</li>
+<li><code>水印</code>：空白工作表 –》 插入 –》 A（文字） –》 输入想要的文字（比如：机密） –》 调整文字大小，倾斜 –》 保存到 ppt 或者 word –》 保存成图片 –》 选中页眉中间框 –》 插入图片 –》 调整图片大小 和 刷淡 –》 最后成功。</li>
+</ol>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="最基本的整列计算相加"><a href="#最基本的整列计算相加" class="headerlink" title="最基本的整列计算相加"></a>最基本的整列计算相加</h3><ol>
+<li>开始 –》 自动求和  按钮，会自动猜测要相加的范围，生成表达式</li>
+<li>也可以用鼠标自己来选择想要框选的范围。</li>
+<li>也可以<code>按住 ctrl 不放</code>来选择多个范围。</li>
+<li>enter 键即可进行计算</li>
+<li>其余的 平均值，最小值，最大值 等，与其基本类似</li>
+</ol>
+<h3 id="下一节介绍复杂函数"><a href="#下一节介绍复杂函数" class="headerlink" title="下一节介绍复杂函数"></a>下一节介绍复杂函数</h3>
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：excel 第一讲 -- excel 入门</li>
+        <li>本文作者：maoxf</li>
+        <li>创建时间：2021-04-09 08:04:20</li>
+        <li>
+            本文链接：https://hapitoku.github.io/2021/04/09/tools/excel/excel-第一讲----excel-入门/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/04/08/blog/hexo/hexo-%E7%AC%AC%E5%9B%9B%E8%AE%B2--%E7%95%8C%E9%9D%A2%E4%B8%AD%E5%8A%A0%E5%85%A5%E9%9F%B3%E4%B9%90/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">hexo 第四讲 -- 界面中加入音乐</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">maoxf</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.2</a>
+        </div>
+        
+    </div>
+
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#excel-%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">excel 入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.1.</span> <span class="nav-text">基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%85%83%E6%A0%BC%E5%AE%BD%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94"><span class="nav-number">1.1.2.</span> <span class="nav-text">单元格宽度自适应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E5%90%8E%E5%B1%85%E4%B8%AD"><span class="nav-number">1.1.3.</span> <span class="nav-text">合并后居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E6%89%80%E6%9C%89%E6%A0%8F%E4%BD%8D%E5%AE%BD%E5%BA%A6%EF%BC%88%E9%AB%98%E5%BA%A6%EF%BC%89%E8%B0%83%E6%95%B4%E4%B8%BA%E4%B8%80%E8%87%B4"><span class="nav-number">1.1.4.</span> <span class="nav-text">将所有栏位宽度（高度）调整为一致</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A7%E7%94%9F%E7%AD%89%E5%B7%AE%EF%BC%88%E7%AD%89%E6%AF%94%EF%BC%89%E6%95%B0%E5%88%97"><span class="nav-number">1.1.5.</span> <span class="nav-text">产生等差（等比）数列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A5%E6%9C%9F%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.1.6.</span> <span class="nav-text">日期设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97"><span class="nav-number">1.1.7.</span> <span class="nav-text">计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%B7%E6%A0%BC%E7%9A%84%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.1.8.</span> <span class="nav-text">价格的设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC%E8%AE%BE%E8%AE%A1"><span class="nav-number">1.2.</span> <span class="nav-text">表格设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC%E8%BE%B9%E6%A1%86"><span class="nav-number">1.2.1.</span> <span class="nav-text">表格边框</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E8%A1%A8%E6%A0%BC%E5%BD%A2%E5%BC%8F"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">默认表格形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A1%A8%E6%A0%BC%E5%BD%A2%E5%BC%8F"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">自定义表格形式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span class="nav-number">1.2.2.</span> <span class="nav-text">表格背景图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%BB%E7%BB%93%E7%AA%97%E6%A0%BC"><span class="nav-number">1.2.3.</span> <span class="nav-text">冻结窗格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%89%B2%E8%A7%86%E7%AA%97"><span class="nav-number">1.2.4.</span> <span class="nav-text">分割视窗</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%97%E7%94%A8%E8%A1%A8%E6%A0%BC%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.5.</span> <span class="nav-text">套用表格格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D%EF%BC%8C%E7%9B%B4%E6%8E%A5%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">第一种，直接格式化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%EF%BC%8C%E7%94%A8%E8%A1%A8%E6%A0%BC%E5%8C%96"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">第二种，用表格化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90"><span class="nav-number">1.3.</span> <span class="nav-text">数据分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-number">1.3.1.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E6%8E%92%E5%BA%8F"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">默认排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">自定义排序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%9B%E9%80%89"><span class="nav-number">1.3.2.</span> <span class="nav-text">筛选</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E7%AD%9B%E9%80%89"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">普通筛选</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%87%E7%89%87%E5%99%A8"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">切片器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.3.3.</span> <span class="nav-text">条件格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AC%E5%BC%8F%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.4.</span> <span class="nav-text">公式设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E8%A1%A8"><span class="nav-number">1.5.</span> <span class="nav-text">工作表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-1"><span class="nav-number">1.5.1.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E8%A1%A8%E7%BE%A4%E7%BB%84"><span class="nav-number">1.5.2.</span> <span class="nav-text">工作表群组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BE%A4%E7%BB%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.5.2.1.</span> <span class="nav-text">群组基本操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E8%AE%A1%E7%AE%97"><span class="nav-number">1.5.2.2.</span> <span class="nav-text">合并计算</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E8%A1%A8"><span class="nav-number">1.6.</span> <span class="nav-text">图表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95"><span class="nav-number">1.6.1.</span> <span class="nav-text">基本方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E7%BA%A7%E8%A1%A8"><span class="nav-number">1.6.2.</span> <span class="nav-text">中级表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%80%8F%E8%A7%86%E8%A1%A8"><span class="nav-number">1.6.3.</span> <span class="nav-text">数据透视表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.7.</span> <span class="nav-text">打印设定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.7.1.</span> <span class="nav-text">分页设定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A%EF%BC%8C%E6%B0%B4%E5%8D%B0"><span class="nav-number">1.7.2.</span> <span class="nav-text">页眉页脚，水印</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">1.8.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%9F%BA%E6%9C%AC%E7%9A%84%E6%95%B4%E5%88%97%E8%AE%A1%E7%AE%97%E7%9B%B8%E5%8A%A0"><span class="nav-number">1.8.1.</span> <span class="nav-text">最基本的整列计算相加</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E4%B8%80%E8%8A%82%E4%BB%8B%E7%BB%8D%E5%A4%8D%E6%9D%82%E5%87%BD%E6%95%B0"><span class="nav-number">1.8.2.</span> <span class="nav-text">下一节介绍复杂函数</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

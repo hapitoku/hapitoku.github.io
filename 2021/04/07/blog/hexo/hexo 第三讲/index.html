@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="maoxf">
+    <meta name="description" content="小站小描述">
+    <meta name="author" content="maoxf">
+    
+    <title>
+        
+            hexo 第三讲 -- hexo 中图床的选择和搭建 |
+        
+        maoxf&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"hapitoku.github.io","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"生活不止眼前的苟且 还有诗和远方的田野"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.2"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="maoxf小站" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                maoxf&#39;s blog
+            </a>
+        </div>
+
+        
+        <!-- 音乐播放器 -->
+        
+            <div>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=86   height=95 src="//music.163.com/outchain/player?type=2&amp;id=1337870861&amp;auto=0&amp;height=66"></iframe>
+            </div>
+        
+        
+        
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">hexo 第三讲 -- hexo 中图床的选择和搭建</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">maoxf</span>
+                        
+                            <span class="author-label">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-04-07 22:55:23
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/blog/">blog</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/hexo/">hexo</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>610 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>2 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>hexo 中图床的选择和搭建</p>
+<h1 id="blog-图床"><a href="#blog-图床" class="headerlink" title="blog 图床"></a>blog 图床</h1><h2 id="图的问题。"><a href="#图的问题。" class="headerlink" title="图的问题。"></a>图的问题。</h2><h3 id="可以使用直接放在项目中的图片。"><a href="#可以使用直接放在项目中的图片。" class="headerlink" title="可以使用直接放在项目中的图片。"></a>可以使用直接放在项目中的图片。</h3><blockquote>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1D7411U7Yk?from=search&seid=17545042781347981752" >图片放在项目中<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<p>缺点：问题在于构建慢，并且各种环境可能都会产生影响，加载慢。</p>
+<p>优点：图片不会消失。</p>
+<h3 id="可以直接用各种图库。"><a href="#可以直接用各种图库。" class="headerlink" title="可以直接用各种图库。"></a>可以直接用各种图库。</h3><p>可以使用 typora 支持的 ipic ，upic ， picgo 等等各种图片服务器。</p>
+<p>缺点：可能会需要翻墙才能访问。或者服务器挂了图片直接消失。</p>
+<p>优点：加载快，方便。</p>
+<h3 id="用picx"><a href="#用picx" class="headerlink" title="用picx"></a>用picx</h3><p>picx 用 github 来存储图片，<code>避免图片的消失</code>。</p>
+<p>并且<code>有 cdn 加速</code>，保证了速度。</p>
+<p><code>安装方便</code>，或者说不用安装，是更大的优点。</p>
+<h2 id="picx"><a href="#picx" class="headerlink" title="picx"></a>picx</h2><blockquote>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/XPoet/picx" >picx github<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://picx.xpoet.cn/#/upload" >picx 官网 <i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+<h3 id="创建一个用来存储图片的-GitHub-仓库-。"><a href="#创建一个用来存储图片的-GitHub-仓库-。" class="headerlink" title="创建一个用来存储图片的 GitHub 仓库 。"></a>创建一个用来存储图片的 <a class="link"   target="_blank" rel="noopener" href="https://github.com/new" >GitHub 仓库<i class="fas fa-external-link-alt"></i></a> 。</h3><h3 id="创建一个有-repo-权限的-GitHub-Token-。"><a href="#创建一个有-repo-权限的-GitHub-Token-。" class="headerlink" title="创建一个有 repo 权限的 GitHub Token 。"></a>创建一个有 repo 权限的 <a class="link"   target="_blank" rel="noopener" href="https://github.com/settings/tokens/new" >GitHub Token<i class="fas fa-external-link-alt"></i></a> 。</h3><h3 id="进入-PicX-官网-，进行图床配置（绑定-GitHub-Token、存储图片的仓库和目录）。"><a href="#进入-PicX-官网-，进行图床配置（绑定-GitHub-Token、存储图片的仓库和目录）。" class="headerlink" title="进入 PicX 官网 ，进行图床配置（绑定 GitHub Token、存储图片的仓库和目录）。"></a>进入 <a class="link"   target="_blank" rel="noopener" href="https://picx.xpoet.cn/" >PicX 官网<i class="fas fa-external-link-alt"></i></a> ，进行图床配置（绑定 GitHub Token、存储图片的仓库和目录）。</h3><ol>
+<li><p>填写 Token，自动获取该用户下的仓库。</p>
+</li>
+<li><p>在仓库的下拉列表中，选择一个作为图床的仓库。</p>
+</li>
+<li><p>选择一种目录方式（目录即仓库里存放图片的文件夹）。</p>
+<ul>
+<li>新建目录：需手动输入一个新目录。</li>
+<li>根目录：图片将直接存储在仓库根目录下。</li>
+<li>自动目录：自动生成日期格式 <code>YYYYMMDD</code> 的目录。例如：<code>20200909</code>。</li>
+<li>选择仓库目录：自动获取仓库下所有目录，选择一个即可。</li>
+</ul>
+</li>
+</ol>
+<p>至此完成图床配置，现在就可以开始上传图片了，快去试试吧~</p>
+<h3 id="上传图片"><a href="#上传图片" class="headerlink" title="上传图片"></a>上传图片</h3><ul>
+<li>可通过 <strong>拖拽图片</strong> 到上传区域进行上传。</li>
+<li>可通过 <strong>复制粘贴图片</strong> 到上传区域进行上传。粘贴图片时，需先点击一下<strong>激活</strong>上传区域，如下图，<strong>上传区域的虚线边框变成墨蓝色，表示已激活，此时粘贴图片才生效</strong>。支持通过键盘快捷键粘贴（<code>ctrl + v</code> / <code>command + v</code>）。</li>
+<li>可通过 <strong>选择文件夹图片</strong> 到上传区域进行上传。</li>
+</ul>
+<p>选择图片完成后，会显示出图片详细信息，你可以 <strong>自定义修改图片名称</strong> 和 <strong>给图片加上哈希码</strong>（确保图片名不会重复）。</p>
+<h3 id="图片上传成功后，即可复制图片外链。"><a href="#图片上传成功后，即可复制图片外链。" class="headerlink" title="图片上传成功后，即可复制图片外链。"></a>图片上传成功后，即可复制图片外链。</h3><p>有 markdown 模式</p>
+<p>也有 github 直接地址 和  cdn 加速地址</p>
+<h1 id="下一节预警"><a href="#下一节预警" class="headerlink" title="下一节预警"></a>下一节预警</h1><p>下一节会介绍  typora 的使用方法。真的是<code>神器</code>呀</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：hexo 第三讲 -- hexo 中图床的选择和搭建</li>
+        <li>本文作者：maoxf</li>
+        <li>创建时间：2021-04-07 22:55:23</li>
+        <li>
+            本文链接：https://hapitoku.github.io/2021/04/07/blog/hexo/hexo 第三讲/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/04/08/blog/typora/Typora%20%E7%AC%AC%E4%B8%80%E8%AE%B2----Typora%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Typora 第一讲 -- Typora的安装使用</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/04/07/blog/hexo/hexo%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">hexo 第二讲 -- hexo 的 主题选择 以及 自动部署</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">maoxf</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.2</a>
+        </div>
+        
+    </div>
+
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#blog-%E5%9B%BE%E5%BA%8A"><span class="nav-number">1.</span> <span class="nav-text">blog 图床</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%9A%84%E9%97%AE%E9%A2%98%E3%80%82"><span class="nav-number">1.1.</span> <span class="nav-text">图的问题。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E7%9B%B4%E6%8E%A5%E6%94%BE%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E3%80%82"><span class="nav-number">1.1.1.</span> <span class="nav-text">可以使用直接放在项目中的图片。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%94%A8%E5%90%84%E7%A7%8D%E5%9B%BE%E5%BA%93%E3%80%82"><span class="nav-number">1.1.2.</span> <span class="nav-text">可以直接用各种图库。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8picx"><span class="nav-number">1.1.3.</span> <span class="nav-text">用picx</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#picx"><span class="nav-number">1.2.</span> <span class="nav-text">picx</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%94%A8%E6%9D%A5%E5%AD%98%E5%82%A8%E5%9B%BE%E7%89%87%E7%9A%84-GitHub-%E4%BB%93%E5%BA%93-%E3%80%82"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建一个用来存储图片的 GitHub 仓库 。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%9C%89-repo-%E6%9D%83%E9%99%90%E7%9A%84-GitHub-Token-%E3%80%82"><span class="nav-number">1.2.2.</span> <span class="nav-text">创建一个有 repo 权限的 GitHub Token 。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5-PicX-%E5%AE%98%E7%BD%91-%EF%BC%8C%E8%BF%9B%E8%A1%8C%E5%9B%BE%E5%BA%8A%E9%85%8D%E7%BD%AE%EF%BC%88%E7%BB%91%E5%AE%9A-GitHub-Token%E3%80%81%E5%AD%98%E5%82%A8%E5%9B%BE%E7%89%87%E7%9A%84%E4%BB%93%E5%BA%93%E5%92%8C%E7%9B%AE%E5%BD%95%EF%BC%89%E3%80%82"><span class="nav-number">1.2.3.</span> <span class="nav-text">进入 PicX 官网 ，进行图床配置（绑定 GitHub Token、存储图片的仓库和目录）。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87"><span class="nav-number">1.2.4.</span> <span class="nav-text">上传图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%88%90%E5%8A%9F%E5%90%8E%EF%BC%8C%E5%8D%B3%E5%8F%AF%E5%A4%8D%E5%88%B6%E5%9B%BE%E7%89%87%E5%A4%96%E9%93%BE%E3%80%82"><span class="nav-number">1.2.5.</span> <span class="nav-text">图片上传成功后，即可复制图片外链。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8B%E4%B8%80%E8%8A%82%E9%A2%84%E8%AD%A6"><span class="nav-number">2.</span> <span class="nav-text">下一节预警</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.2/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
